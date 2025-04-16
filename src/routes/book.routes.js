@@ -1,6 +1,6 @@
 // importado apenas o objeto router do express, e não ele inteiro
 import { Router } from "express";
-import { getAllBooks, getBookById } from "../controller/Book.controller";
+import { getAllBooks, getBookById } from "../controller/Book.controller.js";
 
 const books = Router();
 

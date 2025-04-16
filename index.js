@@ -11,4 +11,4 @@ app.use("/books", booksRoutes)
  
 app.listen(PORT, () => console.log(`Servidor rodando na porta: http://localhost/${PORT}`))
 
-// http://localhost:3000/books
+// http://localhost:3000/books/
