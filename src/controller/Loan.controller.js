@@ -20,6 +20,3 @@ export function getLoansByName (req, res) {
 
     res.status(200).json(loanFound);
 }
-
-
-// const loanFound = loans.filter((loan) => loan.user_name === name)

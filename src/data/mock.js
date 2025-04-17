@@ -32,10 +32,10 @@ const loans = [
         book_id: "002",
         loan_date: "2024-04-05",
         return_schedule: "2024-04-19",
-        return_date: null // ainda não devolveu
+        return_date: null
     },
     {
-        user_name: "Ana Paula",
+        user_name: "Ana Paula Vieira",
         book_id: "001",
         loan_date: "2024-12-10",
         return_schedule: "2025-01-10",
@@ -63,38 +63,54 @@ const loans = [
       return_date: "2025-04-08"
     },
     {
-      user_name: "Ana Paula",
+      user_name: "Ana Paula Vieira",
       book_id: "003",
       loan_date: "2025-04-01",
       return_schedule: "2025-05-01",
       return_date: "2025-04-23"
     },
     {
-        user_name: "Ana Paula",
-        book_id: "002",
-        loan_date: "2025-05-01",
-        return_schedule: "2025-06-01",
-        return_date: "2025-05-014"
-       }
+       user_name: "Ana Paula Vieira",
+       book_id: "002",
+       loan_date: "2025-05-01",
+       return_schedule: "2025-06-01",
+       return_date: "2025-05-014"
+    }
          
 ];
 
 const users = [
     {
-        full_name: "Aline Marques",
-        address: "Rua das Acácias, 120 - Centro",
-        phone_number: "(21) 91234-5678"
+      full_name: "Aline Marques",
+      address: "Rua das Acácias, 123 - Mesquita, RJ",
+      phone_number: "(21) 98888-1234"
     },
     {
-        full_name: "Carlos Silva",
-        address: "Av. Brasil, 4500 - Bonsucesso",
-        phone_number: "(21) 99876-5432"
+      full_name: "Carlos Silva",
+      address: "Av. Central, 456 - Niterói, RJ",
+      phone_number: "(21) 97777-5678"
     },
     {
-        full_name: "Joana Pereira",
-        address: "Rua Floriano Peixoto, 77 - Catete",
-        phone_number: "(21) 98888-2222"
+      full_name: "Ana Paula Vieira",
+      address: "Rua Floriano Peixoto, 789 - Queimados, RJ",
+      phone_number: "(21) 96666-9876"
+    },
+    {
+      full_name: "Carlos Mendes",
+      address: "Travessa dos Jacarandás, 321 - Queimados, RJ",
+      phone_number: "(21) 95555-2468"
+    },
+    {
+      full_name: "Julia Silva",
+      address: "Rua das Palmeiras, 654 - São Gonçalo, RJ",
+      phone_number: "(21) 94444-1357"
+    },
+    {
+      full_name: "Bruno Oliveira",
+      address: "Av. Atlântica, 111 - Mesquita, RJ",
+      phone_number: "(21) 93333-7890"
     }
-];
+  ];
+  
 
 export { books, loans, users };
