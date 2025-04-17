@@ -33,7 +33,50 @@ const loans = [
         loan_date: "2024-04-05",
         return_schedule: "2024-04-19",
         return_date: null // ainda não devolveu
-    }
+    },
+    {
+        user_name: "Ana Paula",
+        book_id: "001",
+        loan_date: "2024-12-10",
+        return_schedule: "2025-01-10",
+        return_date: "2025-01-16"
+    },
+    {
+      user_name: "Carlos Mendes",
+      book_id: "002",
+      loan_date: "2025-01-15",
+      return_schedule: "2025-02-15",
+       return_date: "2025-02-14"
+     },
+     {
+      user_name: "Julia Silva",
+         book_id: "003",
+      loan_date: "2025-03-01",
+      return_schedule: "2025-04-01",
+      return_date: null
+    },
+    {
+      user_name: "Bruno Oliveira",
+         book_id: "001",
+      loan_date: "2025-03-10",
+       return_schedule: "2025-04-10",
+      return_date: "2025-04-08"
+    },
+    {
+      user_name: "Ana Paula",
+      book_id: "003",
+      loan_date: "2025-04-01",
+      return_schedule: "2025-05-01",
+      return_date: "2025-04-23"
+    },
+    {
+        user_name: "Ana Paula",
+        book_id: "002",
+        loan_date: "2025-05-01",
+        return_schedule: "2025-06-01",
+        return_date: "2025-05-014"
+       }
+         
 ];
 
 const users = [
