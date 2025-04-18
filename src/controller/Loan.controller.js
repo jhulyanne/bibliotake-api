@@ -20,3 +20,19 @@ export function getLoansByName (req, res) {
 
     res.status(200).json(loanFound);
 }
+
+export function getNullReturnDate(req, res) {
+    const nullReturnDateArr = loans.filter((loan) => loan.return_date === null)
+
+    if (nullReturnDateArr.length === 0) {
+        return res.status(404).json({
+            message: "Todos os livros foram devolvidos. Nenhum empréstimo pendente no momento.",
+            data: []
+        });
+    }
+
+    res.status(200).json( {
+        message: "Empréstimos de livros que ainda não foram devolvidos:",
+        data: nullReturnDateArr
+    } )
+}

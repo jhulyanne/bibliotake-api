@@ -1,9 +1,12 @@
 import { Router } from "express";
-import { getAllLoans, getLoansByName } from "../controller/Loan.controller.js";
+import { getAllLoans, getLoansByName, getNullReturnDate } from "../controller/Loan.controller.js";
 
 const loans = Router();
 
+
 loans.get("/", getAllLoans);
+loans.get("/pending", getNullReturnDate);
+// rotas que capturam req params devem estar por último, já que elas capturamvalores "infinitamente"
 loans.get("/:name", getLoansByName);
 
 export default loans;
