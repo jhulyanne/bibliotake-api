@@ -1,6 +1,6 @@
-# 📚 API de Empréstimos de Livros
-#### ✍️ Em desenvolvimento contínuo
-Atualmente, esta API implementa apenas rotas GET, com foco em consultas e visualização de dados. Futuramente, pretendo implementar novos recursos como:
+# 📚 BiblioTake - API para gerenciamento de empréstimos de livros em bibliotecas comunitárias.
+### ✍️ Em desenvolvimento contínuo
+Atualmente, esta API implementa apenas rotas GET, com foco em consultas e visualização de dados. Futuramente, o plano é implementar novos recursos como:
 * Cadastro de novos usuários e livros (POST);
 * Atualização de dados existentes (PUT);
 * Remoção de registros (DELETE);
@@ -21,7 +21,7 @@ Para rodar o servidor, você precisa ter instalado em sua máquina:
 ### 🛠️ Instalação
 ```bash
 # 1. Clone este repositório:
-git clone https://github.com/jhulyanne/miniprojeto-m4-pda.git
+git clone https://github.com/jhulyanne/bibliotake-api.git
 
 # 2. Navegue até a pasta do projeto manualmente ou:
 cd miniprojeto-m4-pda
@@ -35,7 +35,6 @@ npm install
 ```bash
 npm run dev
 ```
-> O servidor será iniciado em http://localhost:3000.
 
 ### 📌 Rotas disponíveis
 > 📍 Todas as rotas devem ser precedidas de: http://localhost:3000
