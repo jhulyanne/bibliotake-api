@@ -1,24 +1,29 @@
 # 📚 BiblioTake - API para gerenciamento de empréstimos de livros em bibliotecas comunitárias.
 ### ✍️ Em desenvolvimento contínuo
-Atualmente, esta API implementa apenas rotas GET, com foco em consultas e visualização de dados. Futuramente, o plano é implementar novos recursos como:
-* Cadastro de novos usuários e livros (POST);
-* Atualização de dados existentes (PUT);
-* Remoção de registros (DELETE);
-* Validações e tratamento de erros aprimorados.
+Atualmente, esta API implementa apenas rotas GET, com foco em consultas e visualização de dados. Futuramente, o plano é adicionar novos recursos como:
+* Programação orientada a objetos;
+* Cadastro de novos usuários e livros;
+* Atualização de dados existentes;
+* Remoção de registros;
+* Validações e tratamento de erros aprimorados;
+* Transição para banco de dados real.
 
 ## 💡 Um problema, uma solução
-Nem toda biblioteca tem um sistema digital para controlar seus empréstimos. Esta API simula uma solução simples para esse cenário, permitindo visualizar:
+Nem toda biblioteca tem um sistema digital para controlar seus empréstimos, principalmente bibliotecas comunitárias e ONGs. 
+
+## Funcionalidades:
+Esta API simula uma solução simples para esse cenário, permitindo visualizar:
 - Os livros disponíveis;
 - Os empréstimos realizados;
 - Os usuários cadastrados;
 - Quais empréstimos ainda estão pendentes de devolução.
 
-### 📦 Pré-requisitos
+### Pré-requisitos
 Para rodar o servidor, você precisa ter instalado em sua máquina:
 - [Node.js](https://nodejs.org/) (versão 18 ou superior)
 - Você pode testar as rotas usando um cliente HTTP (como [Thunder Client](https://www.thunderclient.com/) ou [Postman](https://www.postman.com/)) ou digitar os endpoints no seu navegador [http://localhost:3000/](http://localhost:3000/)
 
-### 🛠️ Instalação
+### Instalação
 ```bash
 # 1. Clone este repositório:
 git clone https://github.com/jhulyanne/bibliotake-api.git
@@ -30,14 +35,14 @@ cd miniprojeto-m4-pda
 npm install
 ```
 
-### 🚀 Rodando e testando
+### Rodando e testando
 
 ```bash
 npm run dev
 ```
 
-### 📌 Rotas disponíveis
-> 📍 Todas as rotas devem ser precedidas de: http://localhost:3000
+### Rotas disponíveis
+> Todas as rotas devem ser precedidas de: http://localhost:3000
 
 #### 📚 Livros
 - GET /books – Lista todos os livros.
