@@ -1,4 +1,10 @@
 
+#### ⚠️ Atenção:
+Esta API utiliza dados mockados (simulados), armazenados em arrays dentro do código.
+Por esse motivo, todas as alterações feitas via rotas POST, PUT, ou DELETE são temporárias e serão perdidas ao reiniciar o servidor.
+##### 
+O objetivo deste projeto é demonstrar o funcionamento das operações CRUD (Create, Read, Update, Delete) dentro de uma API RESTful.
+Em uma aplicação real, essas alterações seriam persistidas em um banco de dados.
 
 ### O problema:
 

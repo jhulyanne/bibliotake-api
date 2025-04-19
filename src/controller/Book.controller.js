@@ -17,16 +17,8 @@ export function getBookById(req, res){
 
     if(!bookFound){
         return res.status(404).json({ message: "Livro não encontrado" });
-
-        // Validação que talvez faria sentido se o id fosse um número
-        // if(id = isNaN) {
-        //     // erro 400 : O servidor não pode ou não irá processar a solicitação devido a algo que é percebido como um erro do cliente 
-        //     res.status(400).json({ message: "O ID do livro deve ser um número" })
-        // } else {
-        //     // erro 404 : O servidor não pode encontrar o recurso solicitado
-        //     res.status(404).json({ message: "Livro não encontrado" })
-        // }
     }
+    
     res.status(200).json(bookFound);
 }
 
