@@ -4,21 +4,21 @@ const books = [
         title: "Cemitério Maldito",
         author: "Stephen King",
         publisher: "Suma das Letras",
-        avaiable: true
+        available: true
     },
     {
         id: "002",
         title: "O Pequeno Príncipe",
         author: "Antoine de Saint-Exupéry",
         publisher: "Agir",
-        avaiable: false
+        available: false
     },
     {
         id: "003",
         title: "Capitães da Areia",
         author: "Jorge Amado",
         publisher: "Companhia das Letras",
-        avaiable: false
+        available: false
     }
 ];
 

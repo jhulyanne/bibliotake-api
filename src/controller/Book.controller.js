@@ -6,7 +6,7 @@ export function getAllBooks(req, res) {
     res.status(200).json(books)
 }
 
-// listar o primeiro livro que corresponder com o valor do parâmetro da rota
+// listar o primeiro livro que o id corresponder com o valor do parâmetro da rota
 export function getBookById(req, res){
     // extraindo o parâmetro da rota
     const { id } = req.params
@@ -18,12 +18,17 @@ export function getBookById(req, res){
     if(!bookFound){
         return res.status(404).json({ message: "Livro não encontrado" });
     }
-    
+
     res.status(200).json(bookFound);
 }
 
-// NÃO PRONTA - Retorna todos os livros disponíveis para empréstimo
-// function getAvailableBooks() {
-//     return books.filter(book => book.available);
-//   }
+// listar todos os livros disponíveis para empréstimo
+export function getAvailableBooks(req, res) {
+    const availableBooks = books.filter(book => book.available === true);
 
+    if(!availableBooks) {
+        res.status(404).json( {message: "Nenhum livro disponível no momento"} );
+    }
+
+    res.status(200).json(availableBooks);
+  }

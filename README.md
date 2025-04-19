@@ -1,28 +1,58 @@
+# 📚 API de Empréstimos de Livros
+#### ✍️ Em desenvolvimento contínuo
+Atualmente, esta API implementa apenas rotas GET, com foco em consultas e visualização de dados. Futuramente, pretendo implementar novos recursos como:
+* Cadastro de novos usuários e livros (POST);
+* Atualização de dados existentes (PUT);
+* Remoção de registros (DELETE);
+* Validações e tratamento de erros aprimorados.
 
-#### ⚠️ Atenção:
-Esta API utiliza dados mockados (simulados), armazenados em arrays dentro do código.
-Por esse motivo, todas as alterações feitas via rotas POST, PUT, ou DELETE são temporárias e serão perdidas ao reiniciar o servidor.
-##### 
-O objetivo deste projeto é demonstrar o funcionamento das operações CRUD (Create, Read, Update, Delete) dentro de uma API RESTful.
-Em uma aplicação real, essas alterações seriam persistidas em um banco de dados.
+## 💡 Um problema, uma solução
+Nem toda biblioteca tem um sistema digital para controlar seus empréstimos. Esta API simula uma solução simples para esse cenário, permitindo visualizar:
+- Os livros disponíveis;
+- Os empréstimos realizados;
+- Os usuários cadastrados;
+- Quais empréstimos ainda estão pendentes de devolução.
 
-### O problema:
+### 📦 Pré-requisitos
+Para rodar o servidor, você precisa ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- Você pode testar as rotas usando um cliente HTTP (como [Thunder Client](https://www.thunderclient.com/) ou [Postman](https://www.postman.com/)) ou digitar os endpoints no seu navegador [http://localhost:3000/](http://localhost:3000/)
 
-### A solução:
+### 🛠️ Instalação
+```bash
+# 1. Clone este repositório:
+git clone https://github.com/jhulyanne/miniprojeto-m4-pda.git
 
-### Rodar e testar 
+# 2. Navegue até a pasta do projeto manualmente ou:
+cd miniprojeto-m4-pda
 
-### Rotas
-- OBSERVAÇÃO: antes que qualquer rota, adicionar http:localhost:3000
+# 3. Instale as dependências:
+npm install
+```
 
-* /books - retorna todos os livros;
-* /books/:id - pesquisa de livro por id;
+### 🚀 Rodando e testando
 
-* /loans - retorna todos os empréstimos;
-* /loans/pending - retorna todos os empréstimos pendentes;
-* /loans/:nome - retorna todos os empréstimos de um usuário;
+```bash
+npm run dev
+```
+> O servidor será iniciado em http://localhost:3000.
 
-* /users - retorna todos os usuários;
-* /users/:elemento - retorna todos os usuários onde o endereço contenha o elemento
+### 📌 Rotas disponíveis
+> 📍 Todas as rotas devem ser precedidas de: http://localhost:3000
 
-#### * Este é o mini projeto do módulo 4 proposto pelo curso Desenvolvedor Web Full-Stack do [Programadores do Amanhã](https://programadoresdoamanha.org/).
+#### 📚 Livros
+- GET /books – Lista todos os livros.
+- GET /books/available – Retorna apenas os livros disponíveis para empréstimo.
+- GET /books/:id – Retorna um livro específico com base no id.
+
+#### 📄 Empréstimos
+- GET /loans – Lista todos os empréstimos registrados.
+- GET /loans/pending – Retorna apenas os empréstimos ainda não devolvidos.
+- GET /loans/:nome – Retorna todos os empréstimos feitos por um usuário.
+
+#### 👤 Usuários
+- GET /users – Lista todos os usuários.
+- GET /users/:elemento – Retorna os usuários cujo endereço contenha o elemento fornecido.
+
+### 🧩 Sobre o projeto
+Este é o mini projeto do módulo 4 do curso **Desenvolvimento Web Full-Stack**, do [Programadores do Amanhã](https://programadoresdoamanha.org.br/pt). Foi desenvolvido com foco no aprendizado prático de rotas, controllers e lógica de negócio em APIs RESTful utilizando Node.js com Express.
