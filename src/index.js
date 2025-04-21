@@ -1,7 +1,7 @@
 import express from "express";
-import booksRoutes from "./src/routes/book.routes.js"
-import loanRoutes from "./src/routes/loan.routes.js"
-import userRoutes from "./src/routes/user.routes.js"
+import booksRoutes from "./routes/book.routes.js"
+import loanRoutes from "./routes/loan.routes.js"
+import userRoutes from "./routes/user.routes.js"
 
 const app = express();
 const PORT = 3000;
