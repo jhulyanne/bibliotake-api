@@ -29,7 +29,7 @@ Para rodar o servidor, você precisa ter instalado em sua máquina:
 git clone https://github.com/jhulyanne/bibliotake-api.git
 
 # 2. Navegue até a pasta do projeto manualmente ou:
-cd miniprojeto-m4-pda
+cd bibliotake-api
 
 # 3. Instale as dependências:
 npm install
