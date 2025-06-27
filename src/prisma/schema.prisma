@@ -6,16 +6,18 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  // output   = "../generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+// Melhoria futura: trocar id Int por id String @id @default(uuid())
 model User {
   id            Int     @id @default(autoincrement())
-  cpf           Int     @unique
+  cpf           String     @unique
   full_name     String
   phone_number  String
   address       String
@@ -36,7 +38,7 @@ model Book {
 
 model Loan {
   id          Int      @id @default(autoincrement())
-  user_cpf    Int
+  user_cpf    String
   book_id     Int
   loan_date   DateTime
   return_date DateTime?
