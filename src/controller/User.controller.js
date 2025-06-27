@@ -1,23 +1,40 @@
-import { users } from "../data/mock.js"
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
 
-export function getAllUsers(req, res) {
-    res.status(200).json(users);
+// 🔹 Listar todos os usuários
+export async function getAllUsers(req, res) {
+  try {
+    const users = await prisma.user.findMany()
+    res.status(200).json(users)
+  } catch (error) {
+    console.error('Erro ao buscar usuários:', error)
+    res.status(500).json({ message: 'Erro interno do servidor' })
+  }
 }
 
-export function getUsersByAddress(req, res) {
-    const { address } = req.params;
+// 🔹 Buscar usuários por endereço (filtro parcial e sem case sensitive)
+export async function getUsersByAddress(req, res) {
+  const { address } = req.params
 
-    // verifica se o valor no endereço de cada usuário, há correspondência com o req params
-    const usersFound = users.filter((user) => user.address.toLowerCase().includes(address.toLowerCase()));
+  try {
+    const usersFound = await prisma.user.findMany({
+      where: {
+        address: {
+          contains: address,
+          mode: 'insensitive', // busca sem diferenciar maiúsculas/minúsculas
+        },
+      },
+    })
 
-    if(!usersFound){
-        res.status(404).json( {message: "Parece que não temos nenhum usuário que mora nesse lugar"});
+    if (usersFound.length === 0) {
+      return res.status(404).json({
+        message: 'Parece que não temos nenhum usuário que mora nesse lugar',
+      })
     }
 
-    res.status(200).json(usersFound);
+    res.status(200).json(usersFound)
+  } catch (error) {
+    console.error('Erro ao buscar por endereço:', error)
+    res.status(500).json({ message: 'Erro interno do servidor' })
+  }
 }
-
-// const busca = "ana";
-// const resultado = loans.filter(loan =>
-//   loan.user_name.toLowerCase().includes(busca.toLowerCase())
-// );
