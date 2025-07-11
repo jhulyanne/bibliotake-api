@@ -1,3 +1,6 @@
+// !!! AOS CORRETORES: 
+// acabei "roubando" acidentalmente o banco de dados do projeto final do M4 no .env, estou trabalhando para corrigir isso
+
 import express from "express";
 import cors from "cors"; 
 import booksRoutes from "./routes/book.routes.js"

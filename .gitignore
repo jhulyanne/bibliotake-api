@@ -2,5 +2,4 @@
 .env
 /src/generated/prisma
 
-todo.md
 /src/prisma/test-seed.js
